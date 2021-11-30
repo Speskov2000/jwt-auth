@@ -8,7 +8,7 @@ upr:
 
 # Запустить server
 run:
-	python ./manage.py runserver 127.0.0.1:8000
+	python ./manage.py runserver 127.0.0.1:8088
 
 # Выполнить миграцию
 mi:
@@ -17,7 +17,7 @@ mi:
 
 # Убить процесс занимающий порт
 kill:
-	fuser -k 8000/tcp
+	fuser -k 8088/tcp
 
 # Запуск оболочки
 shell:
