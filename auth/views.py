@@ -10,5 +10,11 @@ class AboutView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        return Response({
-            'key': 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa quibusdam, hic non dolor facere nulla quidem aut excepturi rem, dolores quos laboriosam earum necessitatibus facilis commodi repellendus sit nobis sequi.'})
+        text = (
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. "
+            "Ipsa quibusdam, hic non dolor facere nulla quidem aut "
+            "excepturi rem,dolores quos laboriosam earum necessitatibus "
+            "facilis commodirepellendus sit nobis sequi."
+        )
+
+        return Response({'key': text})
