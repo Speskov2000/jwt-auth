@@ -29,9 +29,16 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 CORS_ALLOWED_ORIGINS = [
+        # this
+        'http://localhost:8088',
+        'http://127.0.0.1:8088',
+
+        # django-crud
         'http://localhost:8000',
         'http://127.0.0.1:8000',
-        'http://localhost:8080'
+
+        # vue
+        'http://localhost:8080',
 ]
 
 REST_FRAMEWORK = {
