@@ -16,11 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import AboutView
+from .views import MyTokenObtainPairView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
+    path('auth/jwt/token/',
+         MyTokenObtainPairView.as_view(),
+         name='custom_token_obtain_pair'
+         ),
+
     path('about/', AboutView.as_view()),
 ]
